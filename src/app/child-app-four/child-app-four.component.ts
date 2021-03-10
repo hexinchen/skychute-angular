@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HelperService } from '../alt-helper.service';
+import { HelperService } from '../helper.service';
 
 @Component({
   selector: 'app-child-app-four',
@@ -9,6 +9,6 @@ import { HelperService } from '../alt-helper.service';
 export class ChildAppFourComponent {
   constructor(private helperService: HelperService) { }
   inputUpdated(text: string): void {
-    this.helperService.initService(text);
+    this.helperService.setHelperInput(text);
   }
 }

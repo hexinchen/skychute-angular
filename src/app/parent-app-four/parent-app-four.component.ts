@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { HelperService } from '../alt-helper.service';
+import { HelperService } from '../helper.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -13,8 +13,9 @@ export class ParentAppFourComponent implements OnInit, OnDestroy {
 
   constructor(private helperService: HelperService) { }
 
-  ngOnInit(): void{
-    this.subscription = this.helperService.pushHelperInput().subscribe((text) => {this.inputText = text;
+  ngOnInit(): void {
+    this.subscription = this.helperService.getHelperInput().subscribe((text) => {
+      this.inputText = text;
     });
   }
 

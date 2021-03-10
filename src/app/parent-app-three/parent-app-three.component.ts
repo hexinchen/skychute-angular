@@ -8,8 +8,9 @@ import { HelperService } from '../helper.service';
 })
 export class ParentAppThreeComponent {
   constructor(private helperService: HelperService) {}
+
   inputUpdated(text: string): void {
-    this.helperService.initService(text);
+    this.helperService.setHelperInput(text);
   }
 }
 
